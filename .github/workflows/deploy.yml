@@ -28,20 +28,21 @@ jobs:
           cache: npm
 
       - name: Install deps
-        run: npm install
+        run: npm install   # ⬅️ CHANGED
 
       - name: Build
         run: npm run build
 
       - name: Prepare Pages artifacts
         run: |
-          touch dist/.nojekyll                # avoid Jekyll processing
-          cp dist/index.html dist/404.html    # SPA fallback for client-side routing
+          touch dist/.nojekyll
+          cp dist/index.html dist/404.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
+
 
   deploy:
     needs: build
