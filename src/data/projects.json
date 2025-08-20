@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "title": "Building Network Plan",
+    "description": "an entire 2 floored building sktech and Network planning with highest quality performance while maintaining the budget .",
+    "image": "https://www.conceptdraw.com/solution-park/resource/images/solutions/network-layout-floor-plan/Network-Layout-Floor-Plans-Solution-Apple-OS-X.png",
+    "technologies": ["AutoCad", "Node.js", "Wireshark", "PacketTracer", "Stripe"],
+    "category": "Network",
+    "github": "https://github.com/yourusername/ecommerce-project",
+    "demo": "",
+    "year": "2024"
+  } ,
+  {
+    "id": 2,
+    "title": "Building Network Plan",
+    "description": "an entire 2 floored building sktech and Network planning with highest quality performance while maintaining the budget .",
+    "image": "../assets/id1.png",
+    "technologies": ["AutoCad", "Node.js", "Wireshark", "PacketTracer", "Stripe"],
+    "category": "Network",
+    "github": "https://github.com/yourusername/ecommerce-project",
+    "demo": "",
+    "year": "2024"
+  },
+  {
+    "id": 3,
+    "title": "Building Network Plan",
+    "description": "an entire 2 floored building sktech and Network planning with highest quality performance while maintaining the budget .",
+    "image": "../assets/id1.png",
+    "technologies": ["AutoCad", "Node.js", "Wireshark", "PacketTracer", "Stripe"],
+    "category": "Network",
+    "github": "https://github.com/yourusername/ecommerce-project",
+    "demo": "",
+    "year": "2024"
+  }
+
+]
