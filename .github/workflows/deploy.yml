@@ -18,22 +18,30 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      # >>> ADD THIS NEW STEP <<<
+      - name: Debug - List all files
+        run: |
+          pwd
+          ls -la
+          echo "Checking for package.json..."
+          ls -la package.json || echo "package.json not found!"
+      # >>> END OF NEW STEP <<<
+
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
+          cache: 'npm'
+      - name: Install dependencies
+        run: npm ci
 
-      - name: Install deps
-        run: npm install   # ⬅️ CHANGED
-
-      - name: Build
+      - name: Build project
         run: npm run build
 
-      - name: Prepare Pages artifacts
+      - name: Prepare Pages artifact
         run: |
           touch dist/.nojekyll
           cp dist/index.html dist/404.html
@@ -42,7 +50,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
-
 
   deploy:
     needs: build
