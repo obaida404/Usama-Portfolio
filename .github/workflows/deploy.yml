@@ -39,7 +39,15 @@ jobs:
         run: npm ci
 
       - name: Build project
-        run: npm run build
+    
+        run: |
+          echo "### DEBUG: Current directory and contents ###"
+          pwd
+          ls -la
+          echo "### DEBUG: Is index.html here? ###"
+          ls -la index.html || echo "index.html not found in current dir!"
+          echo "### DEBUG: Attempting build... ###"
+          npm run build -- --debug
 
       - name: Prepare Pages artifact
         run: |
