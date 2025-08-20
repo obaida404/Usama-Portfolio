@@ -3,14 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-
   "scripts": {
     "build": "vite build",
     "predeploy": "rimraf dist && npm run build && echo.> dist/.nojekyll && cpx dist/index.html dist/404.html",
     "deploy": "gh-pages -d dist"
   },
-
-
   "dependencies": {
     "@tailwindcss/vite": "^4.1.4",
     "react": "^19.0.0",
@@ -23,6 +20,7 @@
     "@iconify/react": "^5.2.1",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^5.0.1",
     "@vitejs/plugin-react-swc": "^3.8.0",
     "cpx": "^1.2.1",
     "eslint": "^9.22.0",
