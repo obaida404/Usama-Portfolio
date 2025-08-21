@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@theme{
+:root {
   --color-theme: #D4AF37; /* gold */
   --color-theme2: #16346b; /* deep navy */
   --color-darktheme: #0b2e6a; /* navy for main bg */
@@ -22,6 +22,7 @@
   font-weight: 600;
   text-decoration: none;
 }
+
 .card {
   background: rgba(255,255,255,0.03);
   border: 1px solid rgba(255,255,255,0.04);

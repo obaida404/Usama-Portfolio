@@ -25,12 +25,21 @@ const Contact = () => {
 
                     <div className="flex items-center gap-3">
                         <Icon icon="mdi:phone" width="22" height="22" className="text-green-400" />
-                        <a>+966 58 381 7518</a>
+                        <a href="tel:+966583817518" className="hover:underline">
+                            +966 58 381 7518
+                        </a>
                     </div>
 
                     <div className="flex items-center gap-3">
                         <Icon icon="mdi:email" width="22" height="22" className="text-yellow-400" />
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=omobdy13@gmail.com&su=Hello&body=I%20wanted%20to%20reach%20out..." className="hover:underline">omobdy13@gmail.com</a>
+                        <a
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=omobdy13@gmail.com&su=Hello&body=I%20wanted%20to%20reach%20out..."
+                            target="_blank"
+                            rel="noreferrer"
+                            className="hover:underline"
+                        >
+                            omobdy13@gmail.com
+                        </a>
                     </div>
 
                     <div className="flex items-center gap-3">
@@ -46,15 +55,18 @@ const Contact = () => {
                     </div>
 
                     {/* CTA Button */}
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=omobdy13@gmail.com&su=Hello&body=I%20wanted%20to%20reach%20out..."
-                             target="_blank"
-                             rel="noopener noreferrer"
-                             className="btn-theme">
-                             <Icon icon="ic:baseline-email" width="18" height="18" /> Send me an Email
-                             </a>
+                    <a
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=omobdy13@gmail.com&su=Hello&body=I%20wanted%20to%20reach%20out..."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-theme flex items-center gap-2"
+                    >
+                        <Icon icon="ic:baseline-email" width="18" height="18" />
+                        Send me an Email
+                    </a>
                 </div>
 
-                {/* Optional Map */}
+                {/* Riyadh Map */}
                 <div className="card p-4">
                     <iframe
                         title="Riyadh Map"
