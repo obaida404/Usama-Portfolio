@@ -70,15 +70,7 @@ const Home = () => (
         <article className="surface">
           <div className="academy-card-heading">
             <div><p className="eyebrow">Current work</p><h2>Building the next generation at Black Viral Academy</h2></div>
-            <div className="academy-brand-stack">
-              <a className="academy-brand-link" href="https://www.blackviral.club/" target="_blank" rel="noreferrer" aria-label="Visit Black Viral Academy">
-                <img src={blackViralLogo} alt="Black Viral Academy logo" className="academy-logo" loading="lazy" />
-              </a>
-              <a className="academy-brand-link iwsf-brand-link" href="https://www.iwsfederation.com/usama-sayed-abdelmobdy/" target="_blank" rel="noreferrer" aria-label="IWSF profile: Program Director">
-                <img src={iwsfLogoTransparent} alt="" className="academy-iwsf-logo" loading="lazy" />
-                <span>IWSF · Program Director</span>
-              </a>
-            </div>
+            <img src={blackViralLogo} alt="Black Viral Academy logo" className="academy-logo" loading="lazy" />
           </div>
           <p>
             Black Viral Academy brings together swimming, water safety, and multi-sport training.
@@ -100,19 +92,36 @@ const Home = () => (
           </a>
         </article>
 
-        <article className="surface credential-card">
-          <div>
-            <p className="eyebrow">Professional credential</p>
-            <h2>International Water Sports Federation</h2>
-            <p>Trainer and Master Trainer credentials issued by the IWSF.</p>
-            <a className="text-link" href={iwsfCardPdf} target="_blank" rel="noreferrer">
-              Open credential card <span aria-hidden="true">↗</span>
+        <div className="home-side-stack">
+          <article className="surface credential-card">
+            <div>
+              <p className="eyebrow">Professional credential</p>
+              <h2>International Water Sports Federation</h2>
+              <p>Trainer and Master Trainer credentials issued by the IWSF.</p>
+              <a className="text-link" href={iwsfCardPdf} target="_blank" rel="noreferrer">
+                Open credential card <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+            <a className="credential-preview" href={iwsfCardPdf} target="_blank" rel="noreferrer" aria-label="Open IWSF credential card PDF">
+              <img src={iwsfCardImage} alt="IWSF credential card for Usama Sayed Abdelmobdy" loading="lazy" />
             </a>
-          </div>
-          <a className="credential-preview" href={iwsfCardPdf} target="_blank" rel="noreferrer" aria-label="Open IWSF credential card PDF">
-            <img src={iwsfCardImage} alt="IWSF credential card for Usama Sayed Abdelmobdy" loading="lazy" />
-          </a>
-        </article>
+          </article>
+
+          <article className="surface iwsf-role-card" aria-labelledby="iwsf-role-heading">
+            <div className="iwsf-role-heading">
+              <img src={iwsfLogoTransparent} alt="" className="iwsf-role-logo" loading="lazy" />
+              <div>
+                <p className="eyebrow">Current role</p>
+                <h2 id="iwsf-role-heading">Program Director</h2>
+                <p className="muted">International Water Sports Federation</p>
+              </div>
+            </div>
+            <p>Lead programme oversight, international collaboration, and coach education across aquatic disciplines. The role brings partners together around consistent training, certification, and professional development.</p>
+            <a className="text-link" href="https://www.iwsfederation.com/usama-sayed-abdelmobdy/" target="_blank" rel="noreferrer">
+              View IWSF profile <span aria-hidden="true">↗</span>
+            </a>
+          </article>
+        </div>
       </section>
 
       <section className="content-section" aria-labelledby="gallery-heading">

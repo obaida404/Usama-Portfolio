@@ -63,6 +63,7 @@ p { line-height: 1.7; }
 .stat-value { margin:1rem 0 .3rem; font-size:clamp(1.45rem,2.6vw,2rem); font-weight:700; letter-spacing:-.04em; }
 .stat-label { max-width:180px; margin:0; color:var(--muted); font-size:.82rem; line-height:1.5; }
 .home-grid { display:grid; grid-template-columns:1fr 1fr; align-items:start; gap:1rem; }
+.home-side-stack { display:grid; align-content:start; gap:1rem; }
 .surface { padding:clamp(1.4rem,3vw,2rem); background:var(--navy-soft); border:1px solid var(--line); border-radius:6px; }
 .surface p,.academy-panel p,.contact-note p { color:#d4dde4; }
 .surface p:last-child { margin-bottom:0; }
@@ -165,9 +166,8 @@ p { line-height: 1.7; }
   .gallery-grid figure:first-child { grid-column:1/-1; }
   .gallery-grid figure:first-child img { aspect-ratio:16/9; }
   .credential-card { grid-template-columns:1fr; }
-  .academy-brand-stack { width:96px; }
   .academy-logo { width:88px; height:76px; }
-  .academy-iwsf-logo { width:49px; height:38px; }
+  .iwsf-role-logo { width:58px; height:52px; }
   .academy-panel-logo { width:96px; height:90px; }
   .role-profile-link { margin-left:0; margin-top:.75rem; }
   .credential-preview { max-height:none; } .credential-preview img { max-height:260px; }
@@ -219,12 +219,14 @@ p { line-height: 1.7; }
 .gallery-grid figcaption { transition: color .2s ease; }
 .gallery-grid figure:hover figcaption { color: var(--gold); }
 .academy-card-heading,.academy-panel-heading { display:flex; align-items:flex-start; justify-content:space-between; gap:1rem; }
-.academy-brand-stack { flex:none; display:flex; flex-direction:column; align-items:center; gap:.1rem; width:120px; }
-.academy-brand-link { display:grid; justify-items:center; gap:.05rem; color:var(--muted); text-align:center; text-decoration:none; }
-.academy-brand-link:hover { color:var(--gold); }
-.academy-brand-link span { font-size:.63rem; line-height:1.25; }
-.academy-iwsf-logo { display:block; width:58px; height:46px; object-fit:contain; }
-.iwsf-brand-link { margin-top:-.1rem; }
+.iwsf-role-card { display:grid; gap:.75rem; }
+.iwsf-role-heading { display:flex; align-items:center; gap:1rem; }
+.iwsf-role-heading>div { min-width:0; }
+.iwsf-role-heading .eyebrow { margin-bottom:.35rem; }
+.iwsf-role-heading h2 { margin-bottom:.25rem; font-size:clamp(1.45rem,2.4vw,1.85rem); }
+.iwsf-role-heading .muted { margin-bottom:0; }
+.iwsf-role-logo { flex:none; width:68px; height:60px; object-fit:contain; }
+.iwsf-role-card>p:not(.eyebrow) { margin-bottom:0; color:#d4dde4; font-size:.92rem; }
 .academy-card-heading>div,.academy-panel-heading>div { min-width:0; }
 .academy-card-heading h2,.academy-panel-heading h2 { margin-bottom:.9rem; }
 .academy-logo { flex:none; width:112px; height:108px; object-fit:contain; }
