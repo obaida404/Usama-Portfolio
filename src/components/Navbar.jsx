@@ -24,6 +24,9 @@ const Navbar = () => {
           <span>Usama Sayed</span><small>Sport & aquatics</small>
         </Link>
         <div className="nav-links">{renderLinks()}</div>
+        <a className="nav-external linkedin-link" aria-label="LinkedIn profile" href="https://www.linkedin.com/in/usama-sayed/" target="_blank" rel="noreferrer">
+          <Icon icon="akar-icons:linkedin-box-fill" width="20" height="20" /> LinkedIn
+        </a>
         <a className="nav-external" href="https://www.blackviral.club/" target="_blank" rel="noreferrer">Black Viral <span aria-hidden="true">↗</span></a>
         <button type="button" className="menu-button" aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           aria-expanded={isMenuOpen} aria-controls="mobile-navigation" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -32,6 +35,7 @@ const Navbar = () => {
       </div>
       {isMenuOpen && <div className="mobile-navigation" id="mobile-navigation">
         {renderLinks(true)}
+        <a className="nav-link" href="https://www.linkedin.com/in/usama-sayed/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
         <a className="nav-link" href="https://www.blackviral.club/" target="_blank" rel="noreferrer">Black Viral Academy <span aria-hidden="true">↗</span></a>
       </div>}
     </nav>

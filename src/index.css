@@ -172,3 +172,73 @@ p { line-height: 1.7; }
 @media (prefers-reduced-motion:reduce) {
   *,*::before,*::after { scroll-behavior:auto!important; transition-duration:.01ms!important; }
 }
+
+
+/* Restore a little of the original water-inspired color and motion. */
+:root { --aqua: #55c7c7; --blue: #3d81cb; --gold: #e2b45f; }
+.bg-fluid {
+  background:
+    radial-gradient(ellipse at 8% 12%, rgba(20, 100, 148, .32), transparent 38%),
+    radial-gradient(ellipse at 92% 75%, rgba(23, 125, 147, .16), transparent 32%),
+    linear-gradient(145deg, #0a1b30 0%, #0e2745 54%, #0a1b30 100%);
+}
+.home-hero.bg-fluid { min-height: 0; }
+.home-hero { position: relative; isolation: isolate; overflow: hidden; }
+.home-hero::before {
+  position: absolute; z-index: -1; content: ""; width: 44rem; height: 44rem;
+  top: -17rem; right: -13rem; border-radius: 50%;
+  background: radial-gradient(circle, rgba(48, 172, 189, .27), rgba(50, 113, 185, .12) 42%, transparent 72%);
+  filter: blur(8px); animation: water-glow 15s ease-in-out infinite alternate;
+}
+.home-hero::after {
+  position: absolute; right: 0; bottom: 0; left: 0; height: 2px; content: "";
+  background: linear-gradient(90deg, transparent, var(--aqua), var(--gold), transparent); opacity: .75;
+}
+.hero > * { position: relative; z-index: 1; }
+.home-content .content-section:first-child { margin-top: 2.25rem; }
+.eyebrow { color: var(--gold); }
+.surface {
+  background: linear-gradient(145deg, rgba(20, 54, 86, .96), rgba(14, 37, 63, .98));
+  border-color: rgba(85, 199, 199, .2);
+  box-shadow: 0 14px 38px rgba(0, 8, 20, .2);
+  transition: border-color .22s ease, transform .22s ease, box-shadow .22s ease;
+}
+.surface:hover { border-color: rgba(85, 199, 199, .48); box-shadow: 0 18px 44px rgba(0, 8, 20, .32); transform: translateY(-2px); }
+.stat-card { background: linear-gradient(155deg, #15385c, #102742); transition: background .2s ease, transform .2s ease; }
+.stat-card:hover { background: linear-gradient(155deg, #1b4b74, #13314f); transform: translateY(-2px); }
+.stat-card svg { color: var(--aqua); }
+.gallery-grid figure { overflow: hidden; }
+.gallery-grid img { transition: transform .45s cubic-bezier(.2,.7,.2,1), filter .3s ease; }
+.gallery-grid figure:hover img { transform: scale(1.035); filter: saturate(1.08); }
+.gallery-grid figcaption { transition: color .2s ease; }
+.gallery-grid figure:hover figcaption { color: var(--gold); }
+.academy-facts { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: .7rem; margin: 1.3rem 0; }
+.academy-facts div { display: grid; gap: .2rem; padding: .75rem; border-left: 2px solid var(--aqua); background: rgba(85,199,199,.07); }
+.academy-facts strong { color: var(--aqua); font-size: 1.25rem; }
+.academy-facts span { color: var(--muted); font-size: .75rem; line-height: 1.35; }
+.career-title-row { display: flex; align-items: center; gap: 1rem; }
+.career-title-row h2 { margin-bottom: 0; }
+.career-logo { width: 54px; height: 54px; object-fit: contain; padding: .25rem; background: #fff; border-radius: 5px; }
+.earlier-roles { display: grid; grid-template-columns: 1fr 1fr; gap: .35rem 1.5rem; }
+.earlier-roles p { margin: 0; color: #d4dde4; font-size: .9rem; }
+.earlier-roles strong { color: var(--text); }
+.education-heading { display: flex; align-items: center; gap: 1rem; }
+.education-heading img { width: 50px; height: 50px; object-fit: contain; border-radius: 4px; }
+.education-heading .eyebrow { margin: 0; }
+.certificate-link { margin-top: 1rem; }
+.map-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 1rem; }
+.map-grid h3 { font-size: 1rem; }
+.map-grid iframe { display: block; width: 100%; height: 300px; border: 0; border-radius: 4px; background: #102742; }
+.contact-details a:hover { color: var(--aqua); }
+@keyframes water-glow {
+  from { transform: translate3d(-2rem, 1rem, 0) scale(.94); opacity: .72; }
+  to { transform: translate3d(1.5rem, -1rem, 0) scale(1.08); opacity: 1; }
+}
+@media (max-width: 720px) {
+  .earlier-roles, .map-grid { grid-template-columns: 1fr; }
+  .academy-facts { gap: .45rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-hero::before { animation: none; }
+  .surface, .stat-card, .gallery-grid img { transition: none; }
+}

@@ -9,6 +9,24 @@ import iwsfCardPdf from "../assets/IWSF-credentials.pdf"
 import iwsfCardImage from "../assets/iwsf-card.png"
 import interviewPoster from "../assets/Screenshot 2025-08-13 234844.png"
 import interviewVideo from "../assets/WhatsApp Video 2025-08-13 at 23.12.37_8446736d.mp4"
+import archive1 from "../assets/1748504743791.jpg"
+import archive2 from "../assets/1748504767014.jpg"
+import archive3 from "../assets/1748528652485.jpg"
+import archive4 from "../assets/1748528708924.jpg"
+import archive5 from "../assets/1748529906173.jpg"
+import archive6 from "../assets/PHOTO-2023-01-31-05-08-32-3.webp"
+
+const galleryImages = [
+  { src: usamaPortrait, alt: "Usama Sayed Abdelmobdy, portrait" },
+  { src: beachPhoto, alt: "Usama at the beach" },
+  { src: finaPhoto, alt: "Usama in a FINA shirt" },
+  { src: archive1, alt: "Swimming coaching portfolio photograph" },
+  { src: archive2, alt: "Aquatics programme portfolio photograph" },
+  { src: archive3, alt: "Swimming event portfolio photograph" },
+  { src: archive4, alt: "Coach education portfolio photograph" },
+  { src: archive5, alt: "Aquatics event portfolio photograph" },
+  { src: archive6, alt: "Swimming programme portfolio photograph" }
+]
 
 const Home = () => (
   <div className="home-page">
@@ -55,6 +73,12 @@ const Home = () => (
             Its programmes are designed to take young athletes from foundational skills into
             confident participation and competition.
           </p>
+          <div className="academy-facts" aria-label="Black Viral Academy published figures">
+            <div><strong>1,000+</strong><span>athletes trained</span></div>
+            <div><strong>50+</strong><span>certified programmes</span></div>
+            <div><strong>150+</strong><span>pools managed</span></div>
+          </div>
+          <p className="muted">Figures published by Black Viral Academy.</p>
           <ul className="inline-list" aria-label="Black Viral Academy programmes">
             <li>Swimming</li><li>Gymnastics</li><li>Football</li><li>Basketball</li>
             <li>Boxing</li><li>Kickboxing</li>
@@ -85,9 +109,12 @@ const Home = () => (
           <Link className="text-link" to="/experience">Explore experience <span aria-hidden="true">→</span></Link>
         </div>
         <div className="gallery-grid">
-          <figure><img src={usamaPortrait} alt="Usama Sayed Abdelmobdy in a portrait" loading="lazy" /><figcaption>Coach education and sports leadership</figcaption></figure>
-          <figure><img src={beachPhoto} alt="Usama at the beach in swim gear" loading="lazy" /><figcaption>Time in the water</figcaption></figure>
-          <figure><img src={finaPhoto} alt="Usama wearing a FINA shirt" loading="lazy" /><figcaption>Swimming, from grassroots to elite sport</figcaption></figure>
+          {galleryImages.map((image, index) => (
+            <figure key={image.src}>
+              <img src={image.src} alt={image.alt} loading={index < 3 ? "lazy" : "lazy"} />
+              <figcaption>{index < 3 ? ["Portrait", "At the water", "Swimming"][index] : "From the coaching archive"}</figcaption>
+            </figure>
+          ))}
         </div>
       </section>
 

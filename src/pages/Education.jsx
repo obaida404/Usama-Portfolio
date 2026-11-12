@@ -1,3 +1,6 @@
+import atbuLogo from "../assets/1630661672997.jpg"
+import helwanLogo from "../assets/1631340134012.jpg"
+
 const Education = () => (
   <div className="bg-fluid site-content">
     <main className="container page-content">
@@ -6,8 +9,8 @@ const Education = () => (
         <p className="page-lede">Academic study in physical education and sports psychology, alongside international coaching, safety, and instructor-development qualifications.</p>
       </header>
       <section className="content-section education-grid" aria-label="Education">
-        <article className="surface"><p className="eyebrow">2022</p><h2>Master's in Sports Psychology for Elite Swimmers</h2><p>Abubakar Tafawa Balewa University</p><p className="muted">Research focused on the psychological impact of training loads on swimmers during the season.</p></article>
-        <article className="surface"><p className="eyebrow">1997</p><h2>Bachelor of Physical Education</h2><p>Helwan University, Egypt</p></article>
+        <article className="surface"><div className="education-heading"><img src={atbuLogo} alt="Abubakar Tafawa Balewa University" loading="lazy" /><p className="eyebrow">2022</p></div><h2>Master's in Sports Psychology for Elite Swimmers</h2><p>Abubakar Tafawa Balewa University</p><p className="muted">Research focused on the psychological impact of training loads on swimmers during the season.</p></article>
+        <article className="surface"><div className="education-heading"><img src={helwanLogo} alt="Helwan University" loading="lazy" /><p className="eyebrow">1997</p></div><h2>Bachelor of Physical Education</h2><p>Helwan University, Egypt</p></article>
         <article className="surface"><p className="eyebrow">Research</p><h2>PhD research candidate</h2><p>Elite swimming performance · Helwan University</p></article>
       </section>
       <section className="content-section">
@@ -24,6 +27,9 @@ const Education = () => (
             <li>Advanced Sports Management · Monash University</li><li>CMAS Master Trainer · Scuba Diving, Level 3</li>
           </ul></article>
         </div>
+        <a className="text-link certificate-link" href="https://drive.google.com/file/d/17CtDwC8sOvlG9c3kczuqJ4xUbnucnsrT/view?usp=sharing" target="_blank" rel="noreferrer">
+          View all certificates <span aria-hidden="true">↗</span>
+        </a>
       </section>
     </main>
   </div>

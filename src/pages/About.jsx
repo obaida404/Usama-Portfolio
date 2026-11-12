@@ -1,3 +1,8 @@
+import aboutPhoto1 from "../assets/PHOTO-2022-01-20-19-01-16-1.webp"
+import aboutPhoto2 from "../assets/1748528581581.jpg"
+import aboutPhoto3 from "../assets/PHOTO-2022-01-20-19-01-16.webp"
+import aboutPhoto4 from "../assets/1748529684165.jpg"
+
 const achievements = [
   ["SAR 350K → 21M", "Annual swimming programme revenue at Leejam", "Grew annual revenue through programme development and operational leadership."],
   ["57", "BLU Swimming Academy locations established", "Expanded access to structured swimming instruction across the network."],
@@ -95,6 +100,15 @@ const About = () => (
           <li>High-performance athlete development</li><li>Sports facility operations</li>
           <li>Water safety and lifeguard development</li><li>Quality assurance and team leadership</li>
         </ul>
+      </section>
+
+      <section className="content-section" aria-labelledby="archive-heading">
+        <div className="section-intro"><p className="eyebrow">From the archive</p><h2 id="archive-heading">A career on deck</h2></div>
+        <div className="gallery-grid archive-gallery">
+          {[aboutPhoto1, aboutPhoto2, aboutPhoto3, aboutPhoto4].map((photo, index) => (
+            <figure key={photo}><img src={photo} alt={`Aquatics portfolio archive photograph ${index + 1}`} loading="lazy" /><figcaption>Coaching and programme work</figcaption></figure>
+          ))}
+        </div>
       </section>
 
     </main>
