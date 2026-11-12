@@ -2,6 +2,7 @@ import aboutPhoto1 from "../assets/PHOTO-2022-01-20-19-01-16-1.webp"
 import aboutPhoto2 from "../assets/1748528581581.jpg"
 import aboutPhoto3 from "../assets/PHOTO-2022-01-20-19-01-16.webp"
 import aboutPhoto4 from "../assets/1748529684165.jpg"
+import blackViralLogo from "../assets/blackviral-logo.png"
 
 const achievements = [
   ["SAR 350K → 21M", "Annual swimming programme revenue at Leejam", "Grew annual revenue through programme development and operational leadership."],
@@ -72,7 +73,10 @@ const About = () => (
 
       <section className="content-section academy-panel">
         <div>
-          <p className="eyebrow">Founder · Black Viral Academy</p><h2>Make sport a lifelong skill</h2>
+          <div className="academy-panel-heading">
+            <div><p className="eyebrow">Founder · Black Viral Academy</p><h2>Make sport a lifelong skill</h2></div>
+            <img src={blackViralLogo} alt="Black Viral Academy logo" className="academy-panel-logo" loading="lazy" />
+          </div>
           <p>
             Black Viral Academy is built around safe, structured progression: water competency and
             foundational movement first, then skills, confidence, and competitive pathways. Its
