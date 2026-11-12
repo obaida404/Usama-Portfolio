@@ -1,6 +1,6 @@
 import leejamLogo from "../assets/leejam_sports_company_logo.jpg"
 import blackViralLogo from "../assets/blackviral-logo.png"
-import iwsfLogo from "../assets/iwsf_logo.jpg"
+import iwsfLogo from "../assets/iwsf_logo_transparent.png"
 import egyptTeamLogo from "../assets/33321.jpg"
 import event1 from "../assets/1748529777879.jpg"
 import event2 from "../assets/1692464874660.jpg"
@@ -39,6 +39,7 @@ const roles = [
   {
     company: "International Water Sports Federation",
     logo: iwsfLogo,
+    logoTransparent: true,
     title: "Program Director · Head Trainer and Courses Director",
     dates: "2020–Present",
     profileUrl: "https://www.iwsfederation.com/usama-sayed-abdelmobdy/",
@@ -85,7 +86,7 @@ const Experience = () => (
               <div className="career-body">
                 <p className="eyebrow">{role.company}</p>
                 <div className="career-title-row">
-                  {role.logo && <img src={role.logo} alt="" className="career-logo" loading="lazy" />}
+                  {role.logo && <img src={role.logo} alt="" className={`career-logo${role.logoTransparent ? " career-logo-transparent" : ""}`} loading="lazy" />}
                   <h2>{role.title}</h2>
                 </div>
                 <p className="muted">{role.dates}</p>

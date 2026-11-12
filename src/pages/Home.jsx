@@ -5,6 +5,7 @@ import usamaPortrait from "../assets/usama-profile.jpg"
 import beachPhoto from "../assets/usama-beach.jpg"
 import finaPhoto from "../assets/usama-fina.jpg"
 import blackViralLogo from "../assets/blackviral-logo.png"
+import iwsfLogoTransparent from "../assets/iwsf_logo_transparent.png"
 import resumePdf from "../assets/Usama_Resume.pdf"
 import iwsfCardPdf from "../assets/IWSF-credentials.pdf"
 import iwsfCardImage from "../assets/iwsf-card.png"
@@ -69,7 +70,15 @@ const Home = () => (
         <article className="surface">
           <div className="academy-card-heading">
             <div><p className="eyebrow">Current work</p><h2>Building the next generation at Black Viral Academy</h2></div>
-            <img src={blackViralLogo} alt="Black Viral Academy logo" className="academy-logo" loading="lazy" />
+            <div className="academy-brand-stack">
+              <a className="academy-brand-link" href="https://www.blackviral.club/" target="_blank" rel="noreferrer" aria-label="Visit Black Viral Academy">
+                <img src={blackViralLogo} alt="Black Viral Academy logo" className="academy-logo" loading="lazy" />
+              </a>
+              <a className="academy-brand-link iwsf-brand-link" href="https://www.iwsfederation.com/usama-sayed-abdelmobdy/" target="_blank" rel="noreferrer" aria-label="IWSF profile: Program Director">
+                <img src={iwsfLogoTransparent} alt="" className="academy-iwsf-logo" loading="lazy" />
+                <span>IWSF · Program Director</span>
+              </a>
+            </div>
           </div>
           <p>
             Black Viral Academy brings together swimming, water safety, and multi-sport training.
