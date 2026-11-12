@@ -1,5 +1,3 @@
-import StatCards from "../components/StatCards"
-
 const roles = [
   {
     company: "Leejam Sports Company · Fitness Time",
@@ -75,7 +73,6 @@ const Experience = () => (
           ))}
         </div>
       </section>
-      <section className="content-section"><p className="eyebrow">Selected experience</p><StatCards /></section>
     </main>
   </div>
 )

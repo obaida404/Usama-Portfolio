@@ -27,8 +27,8 @@ const Home = () => (
             from their first swim to high-performance competition.
           </p>
           <div className="hero-actions">
-            <a className="btn-theme" href={resumePdf} target="_blank" rel="noreferrer">
-              <Icon icon="mdi:file-download-outline" width="19" height="19" /> View résumé
+            <a className="btn-theme" href={resumePdf} download="Usama_Resume.pdf">
+              <Icon icon="mdi:file-download-outline" width="19" height="19" /> Download résumé
             </a>
             <Link className="btn-outline" to="/contact">Get in touch</Link>
           </div>

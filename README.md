@@ -1,13 +1,27 @@
-# React + Vite
+# Usama Sayed Abdelmobdy — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio for aquatics and sports facilities leader Usama Sayed Abdelmobdy. It brings together his coaching and programme leadership experience, selected career results, education, credentials, and contact details.
 
-Currently, two official plugins are available:
+**Live site:** [obaida404.github.io/Usama-Portfolio](https://obaida404.github.io/Usama-Portfolio/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Built with
 
-## Expanding the ESLint configuration
+- React
+- Vite
+- Tailwind CSS
+- React Router
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# Usama-Portfolio
+## Run locally
+
+```sh
+npm install
+npm run dev
+```
+
+Create a production build with:
+
+```sh
+npm run build
+```
+
+The site is configured for GitHub Pages. Changes pushed to `main` are built and deployed by the workflow in `.github/workflows/deploy.yml`.

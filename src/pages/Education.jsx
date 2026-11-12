@@ -1,5 +1,3 @@
-import StatCards from "../components/StatCards"
-
 const Education = () => (
   <div className="bg-fluid site-content">
     <main className="container page-content">
@@ -27,7 +25,6 @@ const Education = () => (
           </ul></article>
         </div>
       </section>
-      <section className="content-section"><p className="eyebrow">Career at a glance</p><StatCards /></section>
     </main>
   </div>
 )

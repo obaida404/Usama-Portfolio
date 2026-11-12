@@ -1,5 +1,3 @@
-import StatCards from "../components/StatCards"
-
 const achievements = [
   ["SAR 350K → 21M", "Annual swimming programme revenue at Leejam", "Grew annual revenue through programme development and operational leadership."],
   ["57", "BLU Swimming Academy locations established", "Expanded access to structured swimming instruction across the network."],
@@ -99,7 +97,6 @@ const About = () => (
         </ul>
       </section>
 
-      <section className="content-section"><p className="eyebrow">Career at a glance</p><StatCards /></section>
     </main>
   </div>
 )
