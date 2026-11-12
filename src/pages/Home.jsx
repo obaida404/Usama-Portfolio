@@ -1,232 +1,106 @@
 import { Link } from "react-router-dom"
 import { Icon } from "@iconify/react"
+import StatCards from "../components/StatCards"
+import usamaPortrait from "../assets/usama-profile.jpg"
+import beachPhoto from "../assets/usama-beach.jpg"
+import finaPhoto from "../assets/usama-fina.jpg"
+import resumePdf from "../assets/Usama_Resume.pdf"
+import iwsfCardPdf from "../assets/IWSF-credentials.pdf"
+import iwsfCardImage from "../assets/iwsf-card.png"
+import interviewPoster from "../assets/Screenshot 2025-08-13 234844.png"
+import interviewVideo from "../assets/WhatsApp Video 2025-08-13 at 23.12.37_8446736d.mp4"
 
-import useReveal from '../hooks/useReveal'
-import StatCards from '../components/StatCards'
-
-// ✅ Import all images properly
-import photo1 from '../assets/1748504743791.jpg'
-import photo2 from '../assets/1748504767014.jpg'
-import photo3 from '../assets/1748528652485.jpg'
-import photo4 from '../assets/1748528708924.jpg'
-import photo5 from '../assets/1748529906173.jpg'
-import photo6 from '../assets/PHOTO-2023-01-31-05-08-32-3.webp'
-
-import usamaPhoto from '../assets/usama.jpg'
-import cvPDF from '../assets/Usama Sayed Aly.pdf'
-import iwsfLogo from '../assets/iwsf_logo.jpg'
-import vertexLogo from '../assets/color_logo.svg'
-import iwsfCard from '../assets/WorkingCard-EU25_page-0001.jpg'
-import videoPoster from '../assets/Screenshot 2025-08-13 234844.png'
-import hamdanVideo from '../assets/WhatsApp Video 2025-08-13 at 23.12.37_8446736d.mp4'
-
-const galleryImages = [photo1, photo2, photo3, photo4, photo5, photo6]
-
-const Home = () => {
-  useReveal()
-
-  return (
-    <div className="bg-fluid min-h-screen text-white">
-      <header className="py-8">
-        <div className="container hero">
-          <div style={{ flex: '0 0 200px' }}>
-            <img
-              src={usamaPhoto}
-              alt="Usama Sayed Aly"
-              className="hero-photo"
-              style={{ width: 180, height: 180 }}
-            />
-          </div>
-
-          <div style={{ flex: 1 }}>
-            <h1 className="text-3xl sm:text-4xl font-extrabold">Usama Sayed Abdelmobdy</h1>
-            <p className="text-sm mt-2 opacity-90 max-w-2xl">
-              International water-sports lecturer, Program Director, coach and mentor with decades
-              of experience building elite programs, coaching national teams and supporting athlete
-              pathways.
-            </p>
-
-            <div className="mt-6 flex gap-3 flex-wrap">
-              <a href={cvPDF} target="_blank" rel="noreferrer" className="btn-theme">
-                <Icon icon="mdi:file-pdf" width="18" height="18" /> Download CV
-              </a>
-
-              <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=omobdy13@gmail.com&su=Hello&body=I%20wanted%20to%20reach%20out..."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-theme"
-              >
-                <Icon icon="ic:baseline-email" width="18" height="18" /> Contact
-              </a>
-
-              <a href="https://www.vertex-ac.com/" target="_blank" rel="noreferrer" className="btn-theme">
-                <Icon icon="akar-icons:link-chain" width="18" height="18" /> Visit Vertex AC
-              </a>
-
-              <a
-                href="https://www.iwsfederation.com/usama-sayed-abdelmobdy/"
-                target="_blank"
-                rel="noreferrer"
-                className="btn-theme"
-              >
-                <img
-                  src={iwsfLogo}
-                  alt="IWSF"
-                  style={{ width: 20, height: 20, objectFit: 'contain' }}
-                />{" "}
-                IWSF Profile
-              </a>
-            </div>
-
-            <div className="mt-6">
-              <h4 className="font-semibold">Quick facts</h4>
-              <div className="mt-2 text-sm">
-                <div>- Program Director, International Water Sports Federation (IWSF)</div>
-                <div>- Founder & Owner — Vertex AC (Sports Academy)</div>
-                <div>- National Head Coach & International Lecturer</div>
-              </div>
-            </div>
-          </div>
+const Home = () => (
+  <div className="home-page">
+    <header className="home-hero bg-fluid">
+      <div className="container hero">
+        <div className="portrait-wrap">
+          <img src={usamaPortrait} alt="Usama Sayed Abdelmobdy" className="hero-photo" fetchPriority="high" />
+          <p className="portrait-caption">Aquatics · Coaching · Leadership</p>
         </div>
-      </header>
-
-      <main className="container py-8">
-        <section className="grid md:grid-cols-2 gap-6">
-          <div className="card">
-            <h2 className="text-xl font-semibold">Core Competencies</h2>
-            <p className="mt-3 text-sm leading-relaxed">
-              Water Sports Director &amp; International Lecturer | Elite Swimming Coach | Expert in
-              Leadership, Management &amp; Motivational Coaching | Driving Success in the Fitness
-              Industry | Team Development | Startups Sports Academies | Public Speaking | Team
-              Building | Event Planning
-            </p>
-
-            <hr className="my-4 border-gray-600/40" />
-
-            <h3 className="text-lg font-medium mb-3">IWSF Card</h3>
-            <div className="flex justify-center">
-              <div className="p-2 bg-white rounded-xl shadow-xl">
-                <img
-                  src={iwsfCard}
-                  alt="IWSF Certification Card"
-                  className="rounded-md"
-                  style={{ maxWidth: "320px", height: "auto" }}
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="card">
-            <h2 className="text-xl font-semibold">Profile</h2>
-            <p className="mt-2 text-sm">
-              Dynamic coach and sports leader with over 30 years building teams, delivering coaching
-              education, and leading high-performance programs across multiple disciplines.
-              Experienced in athlete development, program design and leadership.
-            </p>
-
-            <section className="mt-6">
-              <h3 className="font-semibold">Recent roles</h3>
-              <div className="mt-3">
-                <div className="mb-3">
-                  <h4 className="font-semibold">Vertex AC — Owner</h4>
-                  <div className="flex items-center gap-4 mt-2">
-                    <img
-                      src={vertexLogo}
-                      alt="Vertex AC logo"
-                      style={{ width: 92, height: 92, objectFit: 'contain' }}
-                    />
-                    <div>
-                      <p className="text-sm max-w-xl">
-                        Founder and owner of Vertex AC (sports academy) — designing athlete
-                        pathways and coaching programs across swimming and water sports.{" "}
-                        <a
-                          href="https://www.vertex-ac.com/"
-                          target="_blank"
-                          rel="noreferrer"
-                          className="underline"
-                        >
-                          Visit website
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <h4 className="font-semibold">
-                    International Water Sports Federation (IWSF) — Program Director
-                  </h4>
-                  <div className="flex items-center gap-4 mt-2">
-                    <img src={iwsfLogo} alt="IWSF logo" className="iwsf-logo" />
-                    <div>
-                      <p className="text-sm max-w-xl">
-                        Program Director at the International Water Sports Federation. Responsible
-                        for program oversight, international collaboration and delivering coaching
-                        education.{" "}
-                        <a
-                          href="https://www.iwsfederation.com/usama-sayed-abdelmobdy/"
-                          target="_blank"
-                          rel="noreferrer"
-                          className="underline"
-                        >
-                          View profile
-                        </a>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-        </section>
-
-        <section className="mt-8 card">
-          <h2 className="text-xl font-semibold">Gallery</h2>
-          <p className="text-sm mt-2">A selection of photos from coaching, events and programs.</p>
-          <div className="gallery-grid">
-            {galleryImages.map((src, idx) => (
-              <img key={idx} src={src} alt={`Gallery ${idx + 1}`} />
-            ))}
-          </div>
-        </section>
-
-        <section className="mt-6 card">
-          <h3 className="font-semibold">Other Roles</h3>
-          <p className="mt-2">
-            Head Coach — Egypt National Team, Senior Coach at multiple clubs, international lecturer,
-            and advisor for sports academies and federations.
+        <div className="hero-copy">
+          <p className="eyebrow">A career built around the water</p>
+          <h1>Usama Sayed Abdelmobdy</h1>
+          <p className="hero-lede">
+            Aquatics and sports facilities leader, international lecturer, and former Egyptian
+            national team coach. I build programmes, develop coaches, and help athletes progress
+            from their first swim to high-performance competition.
           </p>
-        </section>
-
-        <section className="mt-8 card">
-          <h2 className="text-xl font-semibold mb-2">Hamdan Sports Complex Interview</h2>
-          <p className="text-sm opacity-90 mb-4">
-            Hosted at the Hamdan Sports Complex, this special interview highlights the summer
-            training camp for our international swimmers in preparation for the inaugural Saudi
-            Olympics.
-          </p>
-
-          <div className="flex justify-center">
-            <video
-              controls
-              className="rounded-xl shadow-lg bg-black"
-              style={{
-                maxHeight: '80vh',
-                width: 'auto',
-                maxWidth: '100%',
-                display: 'block',
-              }}
-              poster={videoPoster}
-            >
-              <source src={hamdanVideo} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+          <div className="hero-actions">
+            <a className="btn-theme" href={resumePdf} target="_blank" rel="noreferrer">
+              <Icon icon="mdi:file-download-outline" width="19" height="19" /> View résumé
+            </a>
+            <Link className="btn-outline" to="/contact">Get in touch</Link>
           </div>
-        </section>
-      </main>
-    </div>
-  )
-}
+          <p className="hero-location">Based in Riyadh, Saudi Arabia · Working internationally</p>
+        </div>
+      </div>
+    </header>
 
+    <main className="container home-content">
+      <section className="content-section" aria-labelledby="career-highlights">
+        <div className="section-intro">
+          <p className="eyebrow">Career at a glance</p>
+          <h2 id="career-highlights">Experience measured in people and programmes.</h2>
+        </div>
+        <StatCards />
+      </section>
+
+      <section className="content-section home-grid" aria-label="Current work and credentials">
+        <article className="surface">
+          <p className="eyebrow">Current work</p>
+          <h2>Building the next generation at Black Viral Academy</h2>
+          <p>
+            Black Viral Academy brings together swimming, water safety, and multi-sport training.
+            Its programmes are designed to take young athletes from foundational skills into
+            confident participation and competition.
+          </p>
+          <ul className="inline-list" aria-label="Black Viral Academy programmes">
+            <li>Swimming</li><li>Gymnastics</li><li>Football</li><li>Basketball</li>
+            <li>Boxing</li><li>Kickboxing</li>
+          </ul>
+          <a className="text-link" href="https://www.blackviral.club/" target="_blank" rel="noreferrer">
+            Visit Black Viral Academy <span aria-hidden="true">↗</span>
+          </a>
+        </article>
+
+        <article className="surface credential-card">
+          <div>
+            <p className="eyebrow">Professional credential</p>
+            <h2>International Water Sports Federation</h2>
+            <p>Trainer and Master Trainer credentials issued by the IWSF.</p>
+            <a className="text-link" href={iwsfCardPdf} target="_blank" rel="noreferrer">
+              Open credential card <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <a className="credential-preview" href={iwsfCardPdf} target="_blank" rel="noreferrer" aria-label="Open IWSF credential card PDF">
+            <img src={iwsfCardImage} alt="IWSF credential card for Usama Sayed Abdelmobdy" loading="lazy" />
+          </a>
+        </article>
+      </section>
+
+      <section className="content-section" aria-labelledby="gallery-heading">
+        <div className="section-heading-row">
+          <div><p className="eyebrow">On deck and beyond</p><h2 id="gallery-heading">A few moments from the work</h2></div>
+          <Link className="text-link" to="/experience">Explore experience <span aria-hidden="true">→</span></Link>
+        </div>
+        <div className="gallery-grid">
+          <figure><img src={usamaPortrait} alt="Usama Sayed Abdelmobdy in a portrait" loading="lazy" /><figcaption>Coach education and sports leadership</figcaption></figure>
+          <figure><img src={beachPhoto} alt="Usama at the beach in swim gear" loading="lazy" /><figcaption>Time in the water</figcaption></figure>
+          <figure><img src={finaPhoto} alt="Usama wearing a FINA shirt" loading="lazy" /><figcaption>Swimming, from grassroots to elite sport</figcaption></figure>
+        </div>
+      </section>
+
+      <section className="content-section interview-section">
+        <div>
+          <p className="eyebrow">In conversation</p><h2>At Hamdan Sports Complex</h2>
+          <p>An interview from an international swimming camp, sharing the work behind athlete preparation and coach development.</p>
+        </div>
+        <video controls preload="none" poster={interviewPoster} aria-label="Interview at Hamdan Sports Complex">
+          <source src={interviewVideo} type="video/mp4" />Your browser does not support the video tag.
+        </video>
+      </section>
+    </main>
+  </div>
+)
 export default Home

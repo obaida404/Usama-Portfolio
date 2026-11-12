@@ -1,70 +1,34 @@
-import useReveal from '../hooks/useReveal';
-import StatCards from '../components/StatCards';
-import { Icon } from '@iconify/react';
-// Import images
-import atbuLogo from '../assets/1630661672997.jpg';
-import helwanLogo from '../assets/1631340134012.jpg';
+import StatCards from "../components/StatCards"
 
-const Education = () => {
-    useReveal();
-
-    return (
-        <div className="bg-fluid site-content min-h-screen text-white">
-            <main className="container py-12">
-                <StatCards />
-
-                <h1 className="text-2xl font-bold mb-6">Education & Certifications</h1>
-
-                <section className="mt-6 card">
-                    <h3 className="font-semibold mb-4">Education</h3>
-
-                    <div className="flex items-center gap-4 mt-3">
-                        <img src={atbuLogo} alt="Abubakar Tafawa Balewa University logo" className="iwsf-logo" />
-                        <div>
-                            <h4 className="font-bold">Abubakar Tafawa Balewa University</h4>
-                            <p className="text-sm">Master's, Mental Health</p>
-                            <p className="text-xs text-gray-300">Jan 2021 – Feb 2022</p>
-                            <p className="text-sm mt-1">Grade: Distinction with honors</p>
-                            <p className="text-sm">Activities and societies: Sports psychology.</p>
-                            <p className="text-sm mt-1">
-                                The psychological impact of training loads on swimmers during the training season.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="flex items-center gap-4 mt-3">
-                        <img src={helwanLogo} alt="Helwan University Cairo logo" className="iwsf-logo" />
-                        <div>
-                            <h4 className="font-bold">Helwan University Cairo</h4>
-                            <p className="text-sm">Bachelor's degree, Physical Sciences</p>
-                            <p className="text-xs text-gray-300">Sep 1993 – Jun 1997</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section className="mt-6 card">
-                    <h3 className="font-semibold mb-4">Selected Certifications</h3>
-                    <ul className="mt-2">
-                        <li>FINA International Swimming Coaches Certification</li>
-                        <li>Advanced Sports Management — Monash University</li>
-                        <li>IWSF Water Safety & Lifeguard Certification (Master Trainer)</li>
-                        <li>Multiple IWSF master trainer certifications (Aqua Fitness, Baby Swimming, CPR/First Aid)</li>
-                    </ul>
-
-                    <div className="mt-6 flex gap-3 flex-wrap">
-                        <a
-                            href="https://drive.google.com/file/d/17CtDwC8sOvlG9c3kczuqJ4xUbnucnsrT/view?usp=sharing"
-                            target="_blank"
-                            rel="noreferrer"
-                            className="btn-theme"
-                        >
-                            <Icon icon="mdi:file-pdf" width="18" height="18" /> View All Certificates
-                        </a>
-                    </div>
-                </section>
-            </main>
+const Education = () => (
+  <div className="bg-fluid site-content">
+    <main className="container page-content">
+      <header className="page-intro">
+        <p className="eyebrow">Education & credentials</p><h1>Learning that supports the work</h1>
+        <p className="page-lede">Academic study in physical education and sports psychology, alongside international coaching, safety, and instructor-development qualifications.</p>
+      </header>
+      <section className="content-section education-grid" aria-label="Education">
+        <article className="surface"><p className="eyebrow">2022</p><h2>Master's in Sports Psychology for Elite Swimmers</h2><p>Abubakar Tafawa Balewa University</p><p className="muted">Research focused on the psychological impact of training loads on swimmers during the season.</p></article>
+        <article className="surface"><p className="eyebrow">1997</p><h2>Bachelor of Physical Education</h2><p>Helwan University, Egypt</p></article>
+        <article className="surface"><p className="eyebrow">Research</p><h2>PhD research candidate</h2><p>Elite swimming performance · Helwan University</p></article>
+      </section>
+      <section className="content-section">
+        <div className="section-intro"><p className="eyebrow">Selected qualifications</p><h2>Coaching, safety, and sport operations</h2></div>
+        <div className="credential-list">
+          <article><h3>Swimming coaching and instruction</h3><ul>
+            <li>ASCA Level 4 · International Age Group</li><li>ASCA Level 4 Leadership School · International Edition, 2024</li>
+            <li>SwimAmerica Master Trainer Course, October 2026</li><li>FINA Swimming Master Trainer and advanced coaching clinics</li>
+            <li>IWSF Master Trainer · Swimming, Baby Swimming, and Aqua Fitness</li>
+          </ul></article>
+          <article><h3>Safety and professional development</h3><ul>
+            <li>IWSF-authorised Lifeguard Trainer · Levels 1, 2, and 3</li><li>NAEMT Certified Instructor · CPR and First Aid</li>
+            <li>European Resuscitation Council</li><li>STA Level 3 Award in Pool Plant Operations, 2020</li>
+            <li>Advanced Sports Management · Monash University</li><li>CMAS Master Trainer · Scuba Diving, Level 3</li>
+          </ul></article>
         </div>
-    );
-};
-
-export default Education;
+      </section>
+      <section className="content-section"><p className="eyebrow">Career at a glance</p><StatCards /></section>
+    </main>
+  </div>
+)
+export default Education

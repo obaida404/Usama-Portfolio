@@ -1,159 +1,82 @@
-import useReveal from '../hooks/useReveal';
-import StatCards from '../components/StatCards';
-// Import all images
-import leejamLogo from '../assets/leejam_sports_company_logo.jpg';
-import vertexLogo from '../assets/color_logo.svg';
-import iwsfLogo from '../assets/iwsf_logo.jpg';
-import egyptTeamLogo from '../assets/33321.jpg';
-import event1 from '../assets/1748529777879.jpg';
-import event2 from '../assets/1692464874660.jpg';
-import event3 from '../assets/1748529906173.jpg';
-import event4 from '../assets/1748530041114.jpg';
-import event5 from '../assets/1748529822634.jpg';
+import StatCards from "../components/StatCards"
 
-const Experience = () => {
-    useReveal();
+const roles = [
+  {
+    company: "Leejam Sports Company · Fitness Time",
+    title: "Senior Swimming Specialist · Head of Swimming Programmes",
+    dates: "Riyadh, Saudi Arabia · July 2019–August 2025",
+    points: [
+      "Directed swimming operations across 187+ aquatic facilities and led a 370+ person coaching, instruction, and lifeguard workforce.",
+      "Grew annual programme revenue from SAR 350,000 to SAR 21 million and established 57 BLU Swimming Academy locations.",
+      "Partnered with the Saudi Ministry of Education on swimming literacy across 54 schools, reaching more than 1,000 students.",
+      "Helped certify 3,000+ aquatic professionals and introduced common operating, safety, and quality standards."
+    ]
+  },
+  {
+    company: "Black Viral Academy",
+    title: "Founder and Owner",
+    dates: "2025–Present",
+    points: [
+      "Building a multi-sport academy with programmes in swimming, gymnastics, football, basketball, boxing, and kickboxing.",
+      "Set a progression model that moves participants from water safety and foundational skills toward confident participation and competition.",
+      "Published annual targets include 2,000 children supported to become water-safe, 75 safety personnel trained, and 400 swimmers progressing into competitive squads."
+    ]
+  },
+  {
+    company: "International Water Sports Federation",
+    title: "Head Trainer and Courses Director",
+    dates: "2020–Present",
+    points: [
+      "Delivered 200+ certification courses and trained more than 3,000 aquatics professionals.",
+      "Developed training systems used across multiple countries and taught swimming, baby swimming, aqua fitness, lifeguarding, CPR, and first aid.",
+      "Delivered CPR and first-aid programmes with internationally recognised NAEMT (USA) certification."
+    ]
+  },
+  {
+    company: "Egyptian National Swimming Team",
+    title: "Head Coach",
+    dates: "2015–2019",
+    points: [
+      "Prepared elite swimmers for national and international championships and designed annual training and competition plans.",
+      "Developed high-performance athlete pathways and supported coach and talent development."
+    ]
+  },
+  {
+    company: "International Company for Sports Facilities Management",
+    title: "Founder and Chief Executive Officer",
+    dates: "Egypt · 2012–2019",
+    points: [
+      "Founded and grew a sports-facilities management company operating six branches and serving approximately 2,500 athletes.",
+      "Led operations, staffing, budgets, and the long-term growth plan."
+    ]
+  }
+]
 
-    return (
-        <div className="bg-fluid site-content min-h-screen text-white">
-            <main className="container py-12">
-                <StatCards />
-                <h1 className="text-2xl font-bold">Experience</h1>
-
-                <section className="mt-6 card">
-                    <h3 className="font-semibold">Swimming Senior Specialist — Leejam (Fitness Time), Riyadh (2019–2025)</h3>
-                    <div className="flex items-center gap-4 mt-3">
-                        <img src={leejamLogo} alt="Leejam logo" className="iwsf-logo" />
-                        <ul className="mt-2 list-disc list-inside space-y-1 text-sm leading-relaxed">
-                            <li>Led major milestones in swimming and aquatic sports development within the company.</li>
-                            <li>Developed and certified coaches: 1,700+ international certifications, 200+ accredited courses, and 30 Master Trainers (men and women).</li>
-                            <li>Designed and implemented advanced personal training programs with a structured, multi-level technical curriculum and client achievement certificates.</li>
-                            <li>Planned and delivered Blue Swimming Academy projects in Jubail and Jeddah; launched the Children's Learn-to-Swim initiative across branches.</li>
-                            <li>Co-created the Swim Literacy Program with the Ministry of Education to help every child gain the life-saving skill of swimming.</li>
-                            <li>Closed out the division's multi-year vision with gratitude and pride in what the team achieved together.</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <section className="mt-6 card">
-                    <h3 className="font-semibold">Founder & Owner — Vertex Athletic Sports Club (2025–Present)</h3>
-                    <div className="flex items-center gap-4 mt-3">
-                        <img src={vertexLogo} alt="Vertex logo" className="iwsf-logo" />
-                        <div className="mt-2 text-sm leading-relaxed">
-                            <p>
-                                As the founder of Vertex, I set the vision and built a multi-sport academy and club spanning <strong>swimming, gymnastics, boxing, and basketball</strong>. I established our governance, operating model, and coaching standards, recruiting an experienced, internationally certified staff and embedding a <strong>safety-first culture</strong> across all programs.
-                            </p>
-                            <p className="mt-2">
-                                Guided by the region's quality-of-life agenda, I launched an <strong>accredited, multi-level curriculum</strong> that moves participants from foundational skills to competitive pathways. This includes water safety and water competency tracks, structured technical progressions, and athlete development plans, alongside <strong>female participation initiatives</strong> both on deck and in leadership.
-                            </p>
-                            <p className="mt-2">
-                                I designed Vertex's community impact targets and execution plan: helping <strong>2,000 children become water-safe annually</strong>, certifying <strong>75 safety personnel each year</strong>, and progressing <strong>400 swimmers</strong> into competitive squads—while expanding toward <strong>10 safe, family-friendly locations</strong> through a decentralized, accessible footprint.
-                            </p>
-                            <p className="mt-2">
-                                Operationally, I oversee program design, coach education, quality assurance, partnerships with schools and municipalities, and P&amp;L—ensuring that every location delivers the same standard of <strong>care, competence, and competitive opportunity</strong> that defines Vertex.
-                            </p>
-                            <p className="mt-2">
-                                <a
-                                    href="https://www.vertex-ac.com/"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="underline"
-                                >
-                                    View Vertex Website
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                <section className="mt-6 card">
-                    <h3 className="font-semibold">Swimming Program Director — International Water Sports Federation (2020–Present)</h3>
-                    <div className="flex items-center gap-4 mt-3">
-                        <img src={iwsfLogo} alt="IWSF logo" className="iwsf-logo" />
-                        <div className="mt-3 text-sm leading-relaxed">
-                            <p>
-                                At the International Water Sports Federation, I have had the privilege of shaping and leading programs that set the global benchmark for training, certification, and professional development in aquatic sports. My work focuses on raising international standards, ensuring safety, and empowering instructors and coaches with the knowledge and skills to create impact in their communities.
-                            </p>
-                            <p className="mt-2">
-                                Over the years, I have developed curricula, assessment systems, and quality frameworks that allow us to expand across countries with a unified standard. Beyond designing strategy, I actively engage with clubs, schools, and ministries worldwide, collaborating to grow water safety awareness and expand access to aquatic education for all.
-                            </p>
-                            <p className="mt-2">
-                                One of my most important responsibilities is overseeing the certification of trainers and master trainers across a wide range of aquatic disciplines, ensuring that every professional we graduate is prepared to teach with excellence and safeguard lives. Among the certifications I issue are:
-                            </p>
-                            <ul className="mt-2 list-disc list-inside space-y-1">
-                                <li>Pool Lifeguard — Trainer &amp; Master Trainer</li>
-                                <li>CPR &amp; First Aid — Trainer &amp; Master Trainer</li>
-                                <li>Swimming Instructor — Trainer &amp; Master Trainer</li>
-                                <li>Swimming Coach — Trainer &amp; Master Trainer</li>
-                                <li>Baby Swimming — Trainer &amp; Master Trainer</li>
-                                <li>Aqua Fitness — Trainer &amp; Master Trainer</li>
-                                <li>Hydrotherapy</li>
-                                <li>Scuba Diving</li>
-                                <li>Special Needs Aquatics (Autism &amp; Occupational Therapy)</li>
-                                <li>Water Aerobics</li>
-                            </ul>
-                            <p className="mt-2">
-                                Through this role, I continue to champion the idea that aquatics is more than sport — it is a life skill, a pathway to health, and a vehicle for inclusion. My mission within IWSF is to ensure that every certification, every program, and every professional we develop becomes a ripple of change, contributing to safer waters and stronger communities worldwide.
-                            </p>
-                            <p className="mt-2">
-                                <a
-                                    href="https://www.iwsfederation.com/usama-sayed-abdelmobdy/"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="underline"
-                                >
-                                    View IWSF profile
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                <section className="mt-6 card">
-                    <h3 className="font-semibold">Head Coach - Egypt National Swimming Team (2015–2019)</h3>
-                    <div className="flex items-center gap-4 mt-3">
-                        <img src={egyptTeamLogo} alt="Egypt National Team logo" className="iwsf-logo" />
-                        <div className="mt-3 text-sm leading-relaxed">
-                            <p>
-                                Over the course of my coaching career, I have had the privilege of training and guiding swimmers to reach their highest potential — from nurturing young talent to preparing national-level athletes for the world stage. I led athletes to compete in international championships and Olympic qualifiers, achieving record-breaking performances during my tenure.
-                            </p>
-                            <p className="mt-2">
-                                Beyond the pool deck, I coordinated national training camps, oversaw competition logistics, and developed long-term athlete development plans that built pathways from grassroots to elite performance.
-                            </p>
-                            <p className="mt-2">My journey has taken me through key leadership roles, including:</p>
-                            <ul className="mt-2 list-disc list-inside space-y-1">
-                                <li><strong>Head Coach — 6th of October Club (2011–2015)</strong> — building championship-winning squads and fostering a high-performance culture.</li>
-                                <li><strong>Head Coach — Zamalek Club (2009–2011)</strong> — reviving the club's competitive edge through innovative training methods.</li>
-                                <li><strong>General Trainer — Heliopolis Sports Club (2007–2009)</strong> and <strong>6th of October Club (2002–2005)</strong> — developing both youth and senior swimmers with tailored technical programs.</li>
-                                <li><strong>General Trainer — Cairo Sports Club (1995–2002)</strong> and <strong>Police Club (1993–2000)</strong> — laying strong technical foundations for hundreds of swimmers.</li>
-                                <li><strong>Swimming Instructor — Heliopolis Sports Club (1995)</strong> — mentoring beginners and instilling a lifelong love for the water.</li>
-                                <li><strong>Open Water Coach — Cairo National Team (1993–1995)</strong> — preparing athletes for the unique challenges of long-distance competition.</li>
-                            </ul>
-                            <p className="mt-2">
-                                Every role has been a chapter in a larger mission: to shape athletes not just as competitors, but as disciplined, resilient, and confident individuals ready to face any challenge — in sport and in life.
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                <section className="mt-6 card">
-                    <h3 className="font-semibold">Founder & CEO — International Company for Sport Facilities Management, Egypt (2012–2019)</h3>
-                    <p className="mt-2">Managed large-scale sports infrastructure and training centers, overseeing multi-branch academies serving thousands of children.</p>
-                </section>
-               
-                <section className="mt-6 card reveal">
-                    <h3 className="font-semibold">Programs & Events</h3>
-                    <div className="gallery-grid mt-3">
-                        <img src={event1} alt="Event 1" />
-                        <img src={event2} alt="Event 2" />
-                        <img src={event3} alt="Event 3" />
-                        <img src={event4} alt="Event 4" />
-                        <img src={event5} alt="Event 5" />
-                    </div>
-                </section>
-            </main>
+const Experience = () => (
+  <div className="bg-fluid site-content">
+    <main className="container page-content">
+      <header className="page-intro">
+        <p className="eyebrow">Experience</p><h1>Building teams, programmes, and athlete pathways</h1>
+        <p className="page-lede">A career across coaching, international education, and the work of running swimming and sports programmes.</p>
+      </header>
+      <section className="content-section">
+        <div className="career-list">
+          {roles.map((role) => (
+            <article className="career-item" key={role.company}>
+              <div className="career-marker" aria-hidden="true" />
+              <div className="career-body">
+                <p className="eyebrow">{role.company}</p><h2>{role.title}</h2><p className="muted">{role.dates}</p>
+                <ul className="career-points">{role.points.map((point) => <li key={point}>{point}</li>)}</ul>
+                {role.company === "Black Viral Academy" && (
+                  <a className="text-link" href="https://www.blackviral.club/" target="_blank" rel="noreferrer">Black Viral Academy <span aria-hidden="true">↗</span></a>
+                )}
+              </div>
+            </article>
+          ))}
         </div>
-    );
-};
-
-export default Experience;
+      </section>
+      <section className="content-section"><p className="eyebrow">Selected experience</p><StatCards /></section>
+    </main>
+  </div>
+)
+export default Experience
