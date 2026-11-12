@@ -1,4 +1,5 @@
 import leejamLogo from "../assets/leejam_sports_company_logo.jpg"
+import blackViralLogo from "../assets/blackviral-logo.png"
 import iwsfLogo from "../assets/iwsf_logo.jpg"
 import egyptTeamLogo from "../assets/33321.jpg"
 import event1 from "../assets/1748529777879.jpg"
@@ -17,27 +18,34 @@ const roles = [
       "Directed swimming operations across 187+ aquatic facilities and led a 370+ person coaching, instruction, and lifeguard workforce.",
       "Grew annual programme revenue from SAR 350,000 to SAR 21 million and established 57 BLU Swimming Academy locations.",
       "Partnered with the Saudi Ministry of Education on swimming literacy across 54 schools, reaching more than 1,000 students.",
-      "Helped certify 3,000+ aquatic professionals and introduced common operating, safety, and quality standards."
+      "Helped certify 3,000+ aquatic professionals and introduced common operating, safety, and quality standards.",
+      "Developed 1,700+ international coach certifications across more than 200 accredited courses, including a network of 30 Master Trainers.",
+      "Designed progressive personal-training curricula and achievement certificates, and launched learn-to-swim initiatives and BLU Academy projects in Jubail and Jeddah."
     ]
   },
   {
     company: "Black Viral Academy",
+    logo: blackViralLogo,
     title: "Founder and Owner",
     dates: "2025–Present",
     points: [
       "Building a multi-sport academy with programmes in swimming, gymnastics, football, basketball, boxing, and kickboxing.",
       "Set a progression model that moves participants from water safety and foundational skills toward confident participation and competition.",
+      "Established governance, operating processes, and coaching standards; built an internationally certified team around a safety-first culture.",
+      "Lead curriculum, coach education, quality assurance, school and municipal partnerships, and academy operations, with initiatives supporting female participation and leadership.",
       "Published annual targets include 2,000 children supported to become water-safe, 75 safety personnel trained, and 400 swimmers progressing into competitive squads."
     ]
   },
   {
     company: "International Water Sports Federation",
     logo: iwsfLogo,
-    title: "Head Trainer and Courses Director",
+    title: "Program Director · Head Trainer and Courses Director",
     dates: "2020–Present",
+    profileUrl: "https://www.iwsfederation.com/usama-sayed-abdelmobdy/",
     points: [
-      "Delivered 200+ certification courses and trained more than 3,000 aquatics professionals.",
-      "Developed training systems used across multiple countries and taught swimming, baby swimming, aqua fitness, lifeguarding, CPR, and first aid.",
+      "Oversee programme delivery, international collaboration, and coach education across aquatic disciplines.",
+      "Designed course curricula, assessment systems, and quality frameworks to support consistent training and certification across countries.",
+      "Delivered 200+ certification courses and trained more than 3,000 aquatics professionals in swimming, baby swimming, aqua fitness, lifeguarding, CPR, and first aid.",
       "Delivered CPR and first-aid programmes with internationally recognised NAEMT (USA) certification."
     ]
   },
@@ -84,6 +92,9 @@ const Experience = () => (
                 <ul className="career-points">{role.points.map((point) => <li key={point}>{point}</li>)}</ul>
                 {role.company === "Black Viral Academy" && (
                   <a className="text-link" href="https://www.blackviral.club/" target="_blank" rel="noreferrer">Black Viral Academy <span aria-hidden="true">↗</span></a>
+                )}
+                {role.profileUrl && (
+                  <a className="text-link role-profile-link" href={role.profileUrl} target="_blank" rel="noreferrer">IWSF profile <span aria-hidden="true">↗</span></a>
                 )}
               </div>
             </article>

@@ -1,4 +1,5 @@
-import { Link, Route, Routes } from "react-router-dom"
+import { useEffect } from "react"
+import { Link, Route, Routes, useLocation } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import Home from "./pages/Home"
 import About from "./pages/About"
@@ -6,8 +7,15 @@ import Experience from "./pages/Experience"
 import Education from "./pages/Education"
 import Contact from "./pages/Contact"
 
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  useEffect(() => { window.scrollTo(0, 0) }, [pathname])
+  return null
+}
+
 function App() {
   return <>
+    <ScrollToTop />
     <Navbar />
     <Routes>
       <Route path="/" element={<Home />} /><Route path="/about" element={<About />} />
