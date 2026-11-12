@@ -4,7 +4,6 @@ import StatCards from "../components/StatCards"
 import usamaPortrait from "../assets/usama-profile.jpg"
 import beachPhoto from "../assets/usama-beach.jpg"
 import finaPhoto from "../assets/usama-fina.jpg"
-import blackViralLogo from "../assets/blackviral-logo.png"
 import resumePdf from "../assets/Usama_Resume.pdf"
 import iwsfCardPdf from "../assets/IWSF-credentials.pdf"
 import iwsfCardImage from "../assets/iwsf-card.png"
@@ -67,10 +66,8 @@ const Home = () => (
 
       <section className="content-section home-grid" aria-label="Current work and credentials">
         <article className="surface">
-          <div className="academy-card-heading">
-            <div><p className="eyebrow">Current work</p><h2>Building the next generation at Black Viral Academy</h2></div>
-            <img src={blackViralLogo} alt="Black Viral Academy logo" className="academy-logo" loading="lazy" />
-          </div>
+          <p className="eyebrow">Current work</p>
+          <h2>Building the next generation at Black Viral Academy</h2>
           <p>
             Black Viral Academy brings together swimming, water safety, and multi-sport training.
             Its programmes are designed to take young athletes from foundational skills into
