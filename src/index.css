@@ -163,7 +163,8 @@ p { line-height: 1.7; }
   .gallery-grid { grid-template-columns:1fr 1fr; gap:.7rem; }
   .gallery-grid figure:first-child { grid-column:1/-1; }
   .gallery-grid figure:first-child img { aspect-ratio:16/9; }
-  .credential-card { grid-template-columns:1fr; }\n  .academy-logo { width:88px; height:84px; }\n  .academy-panel-logo { width:96px; height:90px; }\n  .role-profile-link { margin-left:0; margin-top:.75rem; }
+  .credential-card { grid-template-columns:1fr; }
+  .academy-logo { width:88px; height:84px; }\n  .academy-panel-logo { width:96px; height:90px; }\n  .role-profile-link { margin-left:0; margin-top:.75rem; }
   .credential-preview { max-height:360px; } .credential-preview img { max-height:340px; }
   .achievement-grid { grid-template-columns:1fr; } .achievement-item { min-height:0; }
   .credential-list { grid-template-columns:1fr; }
